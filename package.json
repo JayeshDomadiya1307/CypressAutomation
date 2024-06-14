@@ -1,0 +1,34 @@
+{
+  "name": "rs_project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress run",
+    "headedTest": "npx cypress run --headed",
+    "cypress-run-form-test": "npx cypress run --spec cypress/e2e/jd-framework\form.cy.ts- --headed --browser chrome"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@badeball/cypress-cucumber-preprocessor": "^20.0.6",
+    "convert-excel-to-json": "^1.7.0",
+    "cypress": "^13.11.0",
+    "neat-csv": "5.1.0",
+    "typescript": "^5.4.5"
+  },
+  "cypress-cucumber-preprocessor": {
+    "json": {
+      "enabled": true,
+      "output": "cypress/cucumberReports/result.json"
+    },
+    "devDependencies": {
+      "cypress-cucumber-preprocessor": "^4.3.1",
+      "cypress-mochawesome-reporter": "^3.8.2"
+    }
+  },
+  "devDependencies": {
+    "cypress-mochawesome-reporter": "^3.8.2"
+  }
+}
